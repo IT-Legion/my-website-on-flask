@@ -1,3 +1,21 @@
+/* Стили для шапки */
+.header {
+    background-color: #333; /* Цвет фона */
+    color: #fff; /* Цвет текста */
+    padding: 20px; /* Внутренний отступ */
+    text-align: right; /* Выравнивание текста по центру */
+}
+/* Стили для ссылок в шапке */
+.header a {
+    color: #fff; /* Цвет текста */
+    text-decoration: none; /* Убираем подчеркивание */
+    margin: 0 10px; /* Отступы между ссылками */
+}
+
+
+
+
+
 body{
     background-color: rgb(122, 122, 122);
 }
@@ -14,4 +32,8 @@ body{
 /* Стили для вашего содержимого */
 .HOME {
     text-align: center;
+}
+
+.HOME_logo{
+    height: 10%;
 }
