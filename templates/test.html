@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Регистрация и Вход</title>
+    <style>
+        /* Стили для шапки */
+        .header {
+            background-color: #333; /* Цвет фона */
+            color: #fff; /* Цвет текста */
+            padding: 20px; /* Внутренний отступ */
+            text-align: center; /* Выравнивание текста по центру */
+        }
+        /* Стили для ссылок в шапке */
+        .header a {
+            color: #fff; /* Цвет текста */
+            text-decoration: none; /* Убираем подчеркивание */
+            margin: 0 10px; /* Отступы между ссылками */
+        }
+    </style>
+</head>
+<body>
+
+<!-- Шапка -->
+<header class="header">
+    <p><a href="#registration">Регистрация</a></p>
+    <p><a href="#login">Вход</a></p>
+</header>
+
+<!-- Регистрация -->
+<section id="registration">
+    <h2>Регистрация</h2>
+    <form>
+        <label for="username">Имя пользователя:</label><br>
+        <input type="text" id="username" name="username"><br>
+        <label for="password">Пароль:</label><br>
+        <input type="password" id="password" name="password"><br><br>
+        <input type="submit" value="Зарегистрироваться">
+    </form>
+</section>
+
+<!-- Вход -->
+<section id="login">
+    <h2>Вход</h2>
+    <form>
+        <label for="login_username">Имя пользователя:</label><br>
+        <input type="text" id="login_username" name="login_username"><br>
+        <label for="login_password">Пароль:</label><br>
+        <input type="password" id="login_password" name="login_password"><br><br>
+        <input type="submit" value="Войти">
+    </form>
+</section>
+
+</body>
+</html>

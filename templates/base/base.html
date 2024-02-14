@@ -7,13 +7,16 @@
     <title>{% block title %}{% endblock%}</title>
 </head>
 <body>
-        <!-- Шапка -->
+<!-- Шапка -->
     <header class="header">
+        <div><img src='/static/images/logo.png' alt="Логотип" class="header_logo"></div>
+        
         <p><a href="#login">Вход</a></p>
         <p><a href="#registration">Регистрация</a></p>
-    </header>
+    </header>  
+
     {% block body %}
     {% endblock%}
-    
+
 </body>
 </html>
