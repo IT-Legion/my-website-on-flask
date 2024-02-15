@@ -44,6 +44,23 @@ def index():
 def about():  
     # Функция для отображения страницы "О нас"
     return render_template('about.html')
+
+
+@app.route('/sign_in')  
+def sign_in():  
+    # Функция для отображения страницы "О нас"
+    return render_template('sign_in.html')
+  
+
+
+@app.route('/sign_up')  
+def login():  
+    # Функция для отображения страницы "О нас"
+    return render_template('sign_up.html')
+  
+
+
+
   
 
 # Декоратор для установки маршрута '/user/<string:name>/<int:id>'
@@ -51,6 +68,19 @@ def about():
 def user(name, id):  
     # Функция для отображения страницы пользователя с указанным именем и идентификатором
     return 'User page: ' + name + " - " + str(id)  
+
+
+
+
+
+@app.route('/test')  
+def test():  
+    # Функция для отображения страницы "О нас"
+    return render_template('test.html')
+  
+
+
+
 
 
 # Условие для проверки, запущен ли этот скрипт напрямую
