@@ -67,7 +67,7 @@ def login():
 @app.route('/user/<string:name>/<int:id>')  
 def user(name, id):  
     # Функция для отображения страницы пользователя с указанным именем и идентификатором
-    return 'User page: ' + name + " - " + str(id)  
+    return 'User page:',  name + " - " + str(id)  
 
 
 
