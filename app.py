@@ -59,10 +59,6 @@ def login():
     return render_template('sign_up.html')
   
 
-
-
-  
-
 # Декоратор для установки маршрута '/user/<string:name>/<int:id>'
 @app.route('/user/<string:name>/<int:id>')  
 def user(name, id):  
@@ -70,7 +66,10 @@ def user(name, id):
     return 'User page:',  name + " - " + str(id)  
 
 
-
+@app.route('/hello')  
+def hello():  
+    
+    return 'Привет мир!'
 
 
 @app.route('/test')  
