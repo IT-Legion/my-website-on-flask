@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Matrix Effect</title>
+<style>
+  body {
+    margin: 0;
+    overflow: hidden;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: black;
+    color: lime;
+  }
+  .matrix {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+  }
+</style>
+</head>
+<body>
+<div class="matrix"></div>
+<script>
+  const matrix = document.querySelector('.matrix');
+  const columns = Math.floor(window.innerWidth / 10);
+  const streams = [...Array(columns)].map(() => Math.floor(Math.random() * window.innerHeight));
+
+  function drawMatrix() {
+    matrix.innerHTML = '';
+    streams.forEach((stream, i) => {
+      const codes = [...Array(Math.floor(Math.random() * 20) + 5)].map(() => Math.floor(Math.random() * 10));
+      const streamElement = document.createElement('div');
+      streamElement.classList.add('stream');
+      streamElement.style.left = (i * 10) + 'px';
+      streamElement.style.top = stream + 'px';
+      codes.forEach((code, j) => {
+        const charElement = document.createElement('span');
+        charElement.textContent = code;
+        charElement.style.animationDelay = (j * 0.1) + 's';
+        streamElement.appendChild(charElement);
+      });
+      matrix.appendChild(streamElement);
+    });
+  }
+
+  drawMatrix();
+  setInterval(drawMatrix, 150);
+</script>
+</body>
+</html>

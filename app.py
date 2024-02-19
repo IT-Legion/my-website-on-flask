@@ -80,6 +80,13 @@ def test():
 
 
 
+@app.route('/matrix')  
+def matrix():  
+    
+    return render_template('matrix.html')
+
+
+
 
 
 # Условие для проверки, запущен ли этот скрипт напрямую
